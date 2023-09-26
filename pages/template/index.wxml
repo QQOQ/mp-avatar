@@ -1,0 +1,41 @@
+<vertical-drag-gesture-handler
+	tag="pan"
+	shouldResponseOnMove="shouldPanResponse"
+	simultaneousHandlers="{{ ['scroll'] }}"
+	onGestureEvent="handleVerticalDrag"
+	style="flex: 1; overflow: auto;width: 100%;"
+>
+	<view style="width: 100%; height: 100%;">
+		<view class="bottom-sheet">
+			<view class="btn-wrp" bind:tap="back">
+				<view class="btn">
+					
+				</view>
+			</view>
+			<view class="title">选择模板</view>
+		</view>
+		<vertical-drag-gesture-handler
+		 	tag="scroll"
+		 	native-view="scroll-view"
+		 	shouldResponseOnMove="shouldScrollViewResponse"
+		 	simultaneousHandlers="{{ ['pan'] }}"
+		>
+			<scroll-view
+			 	style="flex: 1; overflow: auto; width: 100%;height: 100%"
+			 	scroll-y
+			 	worklet:onscrollupdate="handleScroll"
+			 	adjustDecelerationVelocity="adjustDecelerationVelocity"
+			 	bounces="{{ false }}"
+			 	refresher-enabled="{{ false }}"
+			 	type="custom"
+				class="list"
+			>
+				<grid-view type="masonry" cross-axis-count="4" cross-axis-gap="8" main-axis-gap="4">
+					<view wx:for="{{list}}" class="list_item" bind:tap="ck" data-src="{{item}}">
+						<image class="list_img" src="{{item}}" mode="widthFix" />
+					</view>
+				</grid-view>
+			</scroll-view>
+		</vertical-drag-gesture-handler>
+	</view>
+</vertical-drag-gesture-handler>

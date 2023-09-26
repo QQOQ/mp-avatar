@@ -1,0 +1,25 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/template/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "节日头像制作",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "renderer": "skyline",
+    "componentFramework": "glass-easel",
+    "lazyCodeLoading": "requiredComponents",
+    "rendererOptions": {
+        "skyline": {
+			"disableABTest": true,
+            "defaultDisplayBlock": false
+        }
+    },
+    "useExtendedLib": {
+        "weui": true
+    }
+}

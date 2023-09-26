@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+	<snapshot id="view" class="snapshot">
+		<view class="merge">
+			<image wx:if="{{template}}" class="template" src="{{template}}" mode=""/>
+			<image wx:if="{{avatar}}" class="avatar" src="{{avatar}}" mode=""/>
+		</view>
+	</snapshot>
+	<view class="select_img">
+		<button class="button" bindtap="openTemplate">选择模板</button>
+		<button class="button" bindtap="chooseMedia">选择头像</button>
+	</view>
+	<button class="down" type="primary" bindtap="tap">下载头像</button>
+</view>
+<view class="ver">当前版本:{{ver}}</view>
