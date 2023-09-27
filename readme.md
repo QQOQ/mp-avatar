@@ -11,6 +11,10 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
+## 小程序演示
+
+<img src="screenshot/qrcode.png" alt="Logo" width="150">
+
 ## 截图
 
 <img src="screenshot/demo.gif" alt="Logo" width="320">
